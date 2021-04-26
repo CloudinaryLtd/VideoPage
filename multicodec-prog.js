@@ -24,5 +24,5 @@ var cld = cloudinary.Cloudinary.new({
       ]
     }
   };
-  var player = cld.videoPlayer("example-player", {autoplayMode: 'always'});
+  var player = cld.videoPlayer("example-player");
   player.source(src);
