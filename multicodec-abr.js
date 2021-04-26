@@ -3,9 +3,9 @@ var cld = cloudinary.Cloudinary.new({
   });
   var src = {
     publicId: "bur-4k",
-    sourceTypes: ["hls/h265", "hls"],
+    sourceTypes: ["hls/hvc1", "hls"],
     sourceTransformation: {
-        "hls/h265": [
+        "hls/hvc1": [
           {
             streaming_profile: "4k_h265"
           }

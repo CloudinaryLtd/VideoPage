@@ -3,25 +3,25 @@ var cld = cloudinary.Cloudinary.new({
   });
   var src = {
     publicId: "bur-4k",
-    sourceTypes: ["mp4/h265","webm","mp4"],
+    sourceTypes: ['mp4/hvc1','webm/vp9','mp4'],
     sourceTransformation: {
-      "mp4/h265": [
+      "mp4/hvc1": [
         {
             quality: "auto",
             video_codec: "h265"
         }
-      ],
-      "webm": [
+    ],
+      "webm/vp9": [
         {
-          quality: "auto",
-          video_codec: "vp9"
+            quality: "auto",
+            video_codec: "vp9"
         }
-      ],
-      "mp4": [
+    ],
+    "mp4": [
         {
-          quality: "auto"
+            quality: "auto"
         }
-      ]
+    ]
     }
   };
   var player = cld.videoPlayer("example-player");
