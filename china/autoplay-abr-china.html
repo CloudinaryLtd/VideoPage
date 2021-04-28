@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-    <link href="cloudinary_favicon_32x32.png" rel="icon" sizes="32x32" type="image/png">
+    <link rel="preconnect" href="https://res.cloudinary.com">
+    <link href="assets/cloudinary_favicon_32x32.png" rel="icon" sizes="32x32" type="image/png">
 <head>
-    <link href="dist/cld-video-player.light.min.css" rel="stylesheet">
+    <link href="dist/cld-video-player.min.css" rel="stylesheet">
 </head>
 <body>
     <div class="video-container" style="width: 840px">
@@ -10,13 +11,14 @@
       <video
         id="example-player"
         autoplay
+        controls
         muted
         playsinline
         class="cld-video-player cld-video-player-skin-dark cld-fluid"
       ></video>
     </div>
-
     <script type="text/javascript" src="cloudinary-core/cloudinary-core-shrinkwrap.min.js"></script>
-	<script type="text/javascript" src="dist/cld-video-player.light.min.js"></script>
-	<script type="text/javascript" src="multicodec-prog.js"></script>
+	  <script type="text/javascript" src="dist/cld-video-player.min.js"></script>
+	  <script type="text/javascript" src="js/multicodec-abr.js"></script>
 </body>
+
