@@ -1,27 +1,24 @@
 var cld = cloudinary.Cloudinary.new({
-    cloud_name: "hadard"
+    cloud_name: "hadar-ap",
+    private_cdn: true,
+    upload_prefix: "https://api-ap.cloudinary.com"
   });
   var src = {
     publicId: "bur-4k",
-    sourceTypes: ["dash/vp9", "hls/hvc1", "hls"],
+    sourceTypes: ["hls/hvc1", "hls"],
     sourceTransformation: {
-        "dash/vp9": [
-          {
-            streaming_profile: "4k_vp9"
-          }
-      ],
         "hls/hvc1": [
           {
-            streaming_profile: "4k_h265"
+            streaming_profile: "full_hd_h265"
           }
         ],
         "hls": [
           {
-            streaming_profile: "4k"
+            streaming_profile: "full_hd"
           }
         ]
       } 
   };
   var player = cld.videoPlayer("example-player");
-  player.posterOptions({ transformation: { quality: 'auto', fetchFormat: 'auto' } })
+  player.posterOptions({ transformation: { quality: 'auto', fetchFormat: 'auto', width: 1920 } })
   player.source(src);
