@@ -7,23 +7,29 @@ var cld = cloudinary.Cloudinary.new({
     sourceTransformation: {
       "mp4/hvc1": [
         {
-            quality: "auto",
-            video_codec: "h265"
+          crop: "limit",
+          width: 1920,  
+          quality: "auto",
+          video_codec: "h265"
         }
     ],
       "webm/vp9": [
         {
-            quality: "auto",
-            video_codec: "vp9"
+          crop: "limit",
+          width: 1920,
+          quality: "auto",
+          video_codec: "vp9"
         }
     ],
     "mp4": [
         {
-            quality: "auto"
+          crop: "limit",
+          width: 1920,
+          quality: "auto"
         }
     ]
     }
   };
   var player = cld.videoPlayer("example-player");
-  player.posterOptions({ transformation: { quality: 'auto' , fetchFormat: 'auto'} })
+  player.posterOptions({ transformation: { quality: 'auto' , fetchFormat: 'auto', width: 1920, crop: 'limit'} })
   player.source(src);

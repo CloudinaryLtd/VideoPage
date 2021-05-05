@@ -7,16 +7,16 @@ var cld = cloudinary.Cloudinary.new({
     sourceTransformation: {
         "hls/hvc1": [
           {
-            streaming_profile: "4k_h265"
+            streaming_profile: "full_hd_h265"
           }
         ],
         "hls": [
           {
-            streaming_profile: "4k"
+            streaming_profile: "full_hd"
           }
         ]
       } 
   };
   var player = cld.videoPlayer("example-player");
-  player.posterOptions({ transformation: { quality: 'auto' , fetchFormat: 'auto'} })
+  player.posterOptions({ transformation: { quality: 'auto' , fetchFormat: 'auto', width: 1920, crop: 'limit'} })
   player.source(src);

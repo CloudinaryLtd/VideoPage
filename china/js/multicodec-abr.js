@@ -20,5 +20,5 @@ var cld = cloudinary.Cloudinary.new({
       } 
   };
   var player = cld.videoPlayer("example-player");
-  player.posterOptions({ transformation: { quality: 'auto', fetchFormat: 'auto', width: 1920 } })
+  player.posterOptions({ transformation: { quality: 'auto', fetchFormat: 'auto', width: 1920, crop: 'limit' } })
   player.source(src);
