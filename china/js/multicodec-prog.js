@@ -1,6 +1,7 @@
 var cld = cloudinary.Cloudinary.new({
     cloud_name: "hadar-ap",
     private_cdn: true,
+    secure_distribution: "cloudinaryproxy-cn.static.burberry.com",
     upload_prefix: "https://api-ap.cloudinary.com"
   });
   var src = {
