@@ -1,0 +1,30 @@
+<MPD xmlns="urn:mpeg:dash:schema:mpd:2011" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:mpeg:dash:schema:mpd:2011 DASH-MPD.xsd" profiles="urn:mpeg:dash:profile:isoff-on-demand:2011" minBufferTime="PT2S" type="static" mediaPresentationDuration="PT60S">
+  <Period id="0">
+    <AdaptationSet id="0" contentType="video" frameRate="1000000/40000" subsegmentAlignment="true" par="16:9" maxWidth="3840" maxHeight="2160">
+      <Representation id="1" bandwidth="145296" codecs="av01.0.00M.08" mimeType="video/webm" sar="1:1" width="320" height="180">
+        <BaseURL>AV1_180p.webmdv</BaseURL>
+        <SegmentBase indexRange="313-794" timescale="1000000">
+          <Initialization range="0-312" />
+        </SegmentBase>
+      </Representation>
+      <Representation id="2" bandwidth="2580780" codecs="av01.0.05M.08" mimeType="video/webm" sar="1:1" width="1280" height="720">
+        <BaseURL>AV1_HD.webmdv</BaseURL>
+        <SegmentBase indexRange="312-795" timescale="1000000">
+          <Initialization range="0-311" />
+        </SegmentBase>
+      </Representation>
+      <Representation id="3" bandwidth="7866240" codecs="av01.0.08M.08" mimeType="video/webm" sar="1:1" width="1920" height="1080">
+        <BaseURL>AV1_FHD.webmdv</BaseURL>
+        <SegmentBase indexRange="312-809" timescale="1000000">
+          <Initialization range="0-311" />
+        </SegmentBase>
+      </Representation>
+      <Representation id="4" bandwidth="18385056" codecs="av01.0.12M.08" mimeType="video/webm" sar="1:1" width="3840" height="2160">
+        <BaseURL>AV1_4K.webmdv</BaseURL>
+        <SegmentBase indexRange="313-819" timescale="1000000">
+          <Initialization range="0-312" />
+        </SegmentBase>
+      </Representation>
+    </AdaptationSet>
+  </Period>
+</MPD>
