@@ -14,5 +14,20 @@ function setResolutions(resolution) {
         video_collection[i].width = resolution
         video_collection[i].height = resolution / ar_coef;
         video_collection[i].src = (src_base + resolution.toString() + "," + video_collection[i].dataset.codec + src_file + video_collection[i].dataset.format);
+        if(video_collection[i].dataset.codec == "f_auto") {
+            getFautoFormat(video_collection[i].src)
+        }
     }
   } 
+
+  function getFautoFormat(url) {
+    console.log(url);
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (xhttp.readyState == 4 && xhttp.status == 200) {
+          document.getElementById("fauto").textContent = "Video Native Auto Format: " + xhttp.getResponseHeader('content-type');
+      }
+    };
+    xhttp.open("HEAD", url, true);
+    xhttp.send();
+  }
