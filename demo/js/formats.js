@@ -4,6 +4,7 @@ const ar_coef = (16 / 9);
 const src_base = "https://res.cloudinary.com/demo/video/upload/c_limit,q_auto,w_";
 const src_file = "/sea_turtle."
 resolutions.forEach(setOnClick)
+getFautoFormat(video_collection[0].src);
 
 function setOnClick(resolution) {
     document.getElementById(resolution.toString()).addEventListener("click", function () { setResolutions(resolution); });
